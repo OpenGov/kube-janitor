@@ -32,3 +32,4 @@ Some of the default values are not specified in the `values.yaml` and are instea
 | `nodeSelector`           | `PodSpec` for defining nodeSelector to deploy the pod on     | map     | `{}`                        |
 | `affinity`               | `PodSpec` for defining affinity to deploy the pod on         | map     | `{}`                        |
 | `tolerations`            | `PodSpec` for defining tolerations to deploy the pod on      | map     | `{}`                        |
+| `useCustomImagePullSecret`            | `docker registry secret` to pull custom images      | map     | `[]`                        |
