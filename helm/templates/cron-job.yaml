@@ -86,3 +86,7 @@ spec:
             - name: {{ template "chart.fullname" . }}-volume
               configMap:
                 name: {{ template "chart.fullname" . }}
+{{- if .Values.useCustomImagePullSecret }}
+          imagePullSecrets:
+          - name: {{ .Values.useCustomImagePullSecret }}
+{{- end }}
