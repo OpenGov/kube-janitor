@@ -51,3 +51,10 @@ resources:
     memory: 100Mi
 
 useCustomImagePullSecret: []
+
+# Define toleration to make sure kube-janitor deployed on on-demand instance
+tolerations:
+  - key: "nodeType"
+    operator: "Equal"
+    value: "ondemand"
+    effect: "NoSchedule"
